@@ -43,7 +43,6 @@ module.exports = {
         if (representUser?.status !== 200) return reply(`## Error Representing User\n\nThere was an error representing ${fetchUser.username}. Please try again later.`);
 
         flags.pop(); // remove the 64 (ephemeral)
-        flags.push(1 << 15); // component v2
 
         component.reset().text(
             `## Representing\n\nYou're now representing ${fetchUser.username}; they should have been accepted into the server!\n\n-# Please note: you can no longer undo this action.`
